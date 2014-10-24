@@ -22,6 +22,9 @@
 		C9960FD119D20DA8002A3461 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9960FB019D20DA8002A3461 /* UIKit.framework */; };
 		C9960FD919D20DA8002A3461 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C9960FD719D20DA8002A3461 /* InfoPlist.strings */; };
 		C9960FDB19D20DA8002A3461 /* ShutterbugTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C9960FDA19D20DA8002A3461 /* ShutterbugTests.m */; };
+		C9960FE619D20E65002A3461 /* FlickrPhotosTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C9960FE519D20E65002A3461 /* FlickrPhotosTVC.m */; };
+		C9960FE919D20FD9002A3461 /* JustPostedFlickrPhotos.m in Sources */ = {isa = PBXBuildFile; fileRef = C9960FE819D20FD9002A3461 /* JustPostedFlickrPhotos.m */; };
+		C9960FEE19D2112D002A3461 /* FlickrFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = C9960FED19D2112D002A3461 /* FlickrFetcher.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +58,13 @@
 		C9960FD619D20DA8002A3461 /* ShutterbugTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ShutterbugTests-Info.plist"; sourceTree = "<group>"; };
 		C9960FD819D20DA8002A3461 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C9960FDA19D20DA8002A3461 /* ShutterbugTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShutterbugTests.m; sourceTree = "<group>"; };
+		C9960FE419D20E65002A3461 /* FlickrPhotosTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlickrPhotosTVC.h; sourceTree = "<group>"; };
+		C9960FE519D20E65002A3461 /* FlickrPhotosTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlickrPhotosTVC.m; sourceTree = "<group>"; };
+		C9960FE719D20FD9002A3461 /* JustPostedFlickrPhotos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JustPostedFlickrPhotos.h; sourceTree = "<group>"; };
+		C9960FE819D20FD9002A3461 /* JustPostedFlickrPhotos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JustPostedFlickrPhotos.m; sourceTree = "<group>"; };
+		C9960FEB19D2112D002A3461 /* FlickrAPIKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlickrAPIKey.h; sourceTree = "<group>"; };
+		C9960FEC19D2112D002A3461 /* FlickrFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlickrFetcher.h; sourceTree = "<group>"; };
+		C9960FED19D2112D002A3461 /* FlickrFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlickrFetcher.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,9 +124,14 @@
 		C9960FB219D20DA8002A3461 /* Shutterbug */ = {
 			isa = PBXGroup;
 			children = (
+				C9960FEA19D2112D002A3461 /* Flickr Fetcher */,
 				C9960FBB19D20DA8002A3461 /* AppDelegate.h */,
 				C9960FBC19D20DA8002A3461 /* AppDelegate.m */,
 				C9960FBE19D20DA8002A3461 /* Main_iPhone.storyboard */,
+				C9960FE719D20FD9002A3461 /* JustPostedFlickrPhotos.h */,
+				C9960FE819D20FD9002A3461 /* JustPostedFlickrPhotos.m */,
+				C9960FE419D20E65002A3461 /* FlickrPhotosTVC.h */,
+				C9960FE519D20E65002A3461 /* FlickrPhotosTVC.m */,
 				C9960FC119D20DA8002A3461 /* Main_iPad.storyboard */,
 				C9960FC419D20DA8002A3461 /* ViewController.h */,
 				C9960FC519D20DA8002A3461 /* ViewController.m */,
@@ -153,6 +168,16 @@
 				C9960FD719D20DA8002A3461 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C9960FEA19D2112D002A3461 /* Flickr Fetcher */ = {
+			isa = PBXGroup;
+			children = (
+				C9960FEB19D2112D002A3461 /* FlickrAPIKey.h */,
+				C9960FEC19D2112D002A3461 /* FlickrFetcher.h */,
+				C9960FED19D2112D002A3461 /* FlickrFetcher.m */,
+			);
+			path = "Flickr Fetcher";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,7 +279,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9960FC619D20DA8002A3461 /* ViewController.m in Sources */,
+				C9960FE619D20E65002A3461 /* FlickrPhotosTVC.m in Sources */,
+				C9960FE919D20FD9002A3461 /* JustPostedFlickrPhotos.m in Sources */,
 				C9960FBD19D20DA8002A3461 /* AppDelegate.m in Sources */,
+				C9960FEE19D2112D002A3461 /* FlickrFetcher.m in Sources */,
 				C9960FB919D20DA8002A3461 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -470,6 +498,7 @@
 				C9960FE019D20DA8002A3461 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C9960FE119D20DA8002A3461 /* Build configuration list for PBXNativeTarget "ShutterbugTests" */ = {
 			isa = XCConfigurationList;
@@ -478,6 +507,7 @@
 				C9960FE319D20DA8002A3461 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
